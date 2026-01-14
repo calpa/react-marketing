@@ -4,6 +4,7 @@ import { School, AutoAwesome, TrendingUp } from '@mui/icons-material';
 const Hero = () => {
   return (
     <Box 
+      id="hero"
       sx={{ 
         py: { xs: 8, md: 12 }, 
         background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',

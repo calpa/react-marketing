@@ -1,9 +1,16 @@
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 
 const Navbar = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <AppBar 
-      position="static" 
+      position="sticky" 
       elevation={0} 
       sx={{ 
         bgcolor: 'rgba(255, 255, 255, 0.95)', 
@@ -25,8 +32,10 @@ const Navbar = () => {
               letterSpacing: '-0.5px',
               display: 'flex',
               alignItems: 'center',
-              gap: 1
+              gap: 1,
+              cursor: 'pointer'
             }}
+            onClick={() => scrollToSection('hero')}
           >
             🧠 AI Flashcard + Quiz
           </Typography>
@@ -35,6 +44,7 @@ const Navbar = () => {
         <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 1 }}>
           <Button 
             color="inherit" 
+            onClick={() => scrollToSection('features')}
             sx={{ 
               px: 3,
               py: 1.5,
@@ -52,6 +62,7 @@ const Navbar = () => {
           </Button>
           <Button 
             color="inherit" 
+            onClick={() => scrollToSection('pricing')}
             sx={{ 
               px: 3,
               py: 1.5,
@@ -69,6 +80,7 @@ const Navbar = () => {
           </Button>
           <Button 
             color="inherit" 
+            onClick={() => scrollToSection('testimonials')}
             sx={{ 
               px: 3,
               py: 1.5,
@@ -82,12 +94,13 @@ const Navbar = () => {
               }
             }}
           >
-            About
+            Testimonials
           </Button>
         </Box>
         
         <Button 
           variant="contained" 
+          onClick={() => scrollToSection('hero')}
           sx={{ 
             ml: { xs: 1, md: 3 },
             px: 3,

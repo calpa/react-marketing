@@ -24,7 +24,7 @@ const features = [
 
 const Features = () => {
   return (
-    <Box sx={{ py: { xs: 10, md: 16 }, bgcolor: 'white' }}>
+    <Box id="features" sx={{ py: { xs: 10, md: 16 }, bgcolor: 'white' }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: { xs: 8, md: 12 } }}>
           <Typography 

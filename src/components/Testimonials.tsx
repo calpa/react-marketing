@@ -47,7 +47,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <Box sx={{ py: 8, bgcolor: 'grey.50' }}>
+    <Box id="testimonials" sx={{ py: 8, bgcolor: 'grey.50' }}>
       <Container maxWidth="lg">
         <Typography variant="h4" align="center" gutterBottom>
           Testimonials

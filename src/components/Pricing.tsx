@@ -47,7 +47,7 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <Box sx={{ py: 8, bgcolor: 'grey.50' }}>
+    <Box id="pricing" sx={{ py: 8, bgcolor: 'grey.50' }}>
       <Container maxWidth="lg">
         <Typography variant="h4" align="center" gutterBottom>
           Pricing
